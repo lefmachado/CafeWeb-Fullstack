@@ -1,8 +1,10 @@
+server:
+  port: 5000
 spring:
   datasource:
     url: jdbc:mysql://[db_name].cvhzq4q6gx6.sa-east-1.rds.amazonaws.com:3306/ebdb
-    username: [username]
-    password: [password]
+    username: admin
+    password: Testedbcafeweb86
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:

@@ -1,8 +1,11 @@
 .navbar {
+  display: flex;
+  flex-wrap: wrap;
   background-color: #6f4e37; /* Cor de fundo marrom */
   font-family: 'Roboto', sans-serif;
   font-size: 1.1em;
   padding: 0 20px;
+  height: auto;
 }
 
 .logo-icon {
@@ -12,12 +15,15 @@
 
 .navbar-title {
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.0em;
   color: #ffffff;
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .spacer {
   flex: 1 1 auto;
+  height: 70px;
 }
 
 .nav-link {
