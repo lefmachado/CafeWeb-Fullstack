@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CarrinhoService } from '../../services/carrinho.service';
+import { CarrinhoService } from '../../shared/services/carrinho.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';

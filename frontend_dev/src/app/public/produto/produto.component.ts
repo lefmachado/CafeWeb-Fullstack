@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProdutoService } from '../../services/produto.service';
-import { CarrinhoService } from '../../services/carrinho.service';
+import { ProdutoService } from '../../shared/services/produto.service';
+import { CarrinhoService } from '../../shared/services/carrinho.service';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';

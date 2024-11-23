@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ProdutoService } from '../../services/produto.service';
+import { ProdutoService } from '../../shared/services/produto.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
