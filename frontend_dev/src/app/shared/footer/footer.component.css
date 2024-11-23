@@ -1,0 +1,37 @@
+footer {
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #d2b48c; /* Marrom claro estilo café */
+  color: #333333; /* Cinza escuro para contraste */
+  justify-content: space-between;
+  padding: 0 20px;
+  height: auto;
+}
+
+.footer-links a {
+  color: #333333;
+  text-decoration: none;
+  margin-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-toolbar span {
+  font-size: 0.9em;
+  justify-content: flex-start;
+}
+
+.spacer {
+  flex: 1 1 auto;
+  height: 70px;
+}
