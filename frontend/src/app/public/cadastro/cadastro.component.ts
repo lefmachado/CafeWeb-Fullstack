@@ -33,8 +33,7 @@ export class CadastroComponent {
     this.cadastroForm = this.fb.group({
       nome: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
-      senha: ['', [Validators.required, Validators.minLength(6)]],
-      endereco: ['']
+      senha: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
 
