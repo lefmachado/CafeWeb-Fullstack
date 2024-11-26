@@ -11,6 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/auth")
@@ -24,16 +26,23 @@ public class AuthController {
     private JwtUtil jwtUtil;
 
     @PostMapping("/register")
-    public ResponseEntity<String> register(@RequestBody @Valid UserRegisterDTO dto) {
+    public ResponseEntity<Map<String, String>> register(@RequestBody @Valid UserRegisterDTO dto) {
         userService.register(dto);
-        return ResponseEntity.ok("Usuário registrado com sucesso.");
+        Map<String, String> response = new HashMap<>();
+        response.put("message", "Usuário registrado com sucesso.");
+        return ResponseEntity.ok(response);
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody @Valid UserLoginDTO dto) {
+    public ResponseEntity<Map<String, String>> login(@RequestBody @Valid UserLoginDTO dto) {
         UserEntity user = userService.authenticate(dto);
         String token = jwtUtil.generateToken(new org.springframework.security.core.userdetails.User(
                 user.getEmail(), user.getPassword(), new ArrayList<>()));
-        return ResponseEntity.ok(token);
+
+        // Encapsula o token em um objeto JSON
+        Map<String, String> response = new HashMap<>();
+        response.put("token", token);
+
+        return ResponseEntity.ok(response);
     }
 }

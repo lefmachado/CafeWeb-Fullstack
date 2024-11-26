@@ -6,17 +6,17 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:8081/api/auth/clientes'; // Endpoint da API Spring Boot
+  private apiUrl = 'http://localhost:8080/auth'; // Endpoint da API Spring Boot
 
   constructor(private http: HttpClient) {}
 
   // Método para cadastrar um cliente
-  cadastrarCliente(cliente: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/cadastrar`, cliente);
+  cadastrarCliente(users: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/register`, users);
   }
 
   // Método para fazer login
-  login(email: string, senha: string): Observable<any> {
-    return this.http.post(`${this.apiUrl}/login`, { email, senha });
+  login(email: string, password: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/login`, { email, password });
   }
 }

@@ -35,14 +35,14 @@ export class LoginComponent {
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      senha: ['', [Validators.required, Validators.minLength(6)]]
+      password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
 
   login(): void {
     if (this.loginForm.valid) {
-      const { email, senha } = this.loginForm.value;
-      this.authService.login(email, senha).subscribe({
+      const { email, password } = this.loginForm.value;
+      this.authService.login(email, password).subscribe({
         next: (response) => {
           alert('Login realizado com sucesso!');
           localStorage.setItem('authToken', response.token);
