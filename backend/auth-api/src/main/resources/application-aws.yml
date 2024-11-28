@@ -1,16 +1,13 @@
 server:
   port: 5000
-
 spring:
-  profiles:
-    active: aws
   datasource:
     url: jdbc:mysql://awseb-e-eip3p2zeat-stack-awsebrdsdatabase-8zbvv3rfdzu8.cpass2wm2la1.sa-east-1.rds.amazonaws.com:3306/ebdb
     username: admin
     password: Teste*Leandro123
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: update
     show-sql: true
