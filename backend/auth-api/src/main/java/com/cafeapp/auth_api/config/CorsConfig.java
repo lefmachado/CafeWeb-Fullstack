@@ -31,7 +31,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://leandromachado.tech", "http://cafeapp-spa.s3-website-sa-east-1.amazonaws.com","https://d2m8asc8lvf52z.cloudfront.net")
+                        .allowedOrigins("http://leandromachado.tech", "https://leandromachado.tech", "http://cafeapp-spa.s3-website-sa-east-1.amazonaws.com","https://d2m8asc8lvf52z.cloudfront.net")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
